@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    
+</head>
+<body onload="start()">
+    <h1 class="alert-primary text-center">Student Result App</h1>
+    <div class="container">
+        <div class="row ">
+            <div class="col-xl-4">
+                <input type="text" id="roll" placeholder="Enter Roll Number">
+            </div>
+             <div class="col-xl-4">
+                <input type="text" id="nam" placeholder="Enter Student Name">
+            </div>
+             <div class="col-xl-4">
+                <select name="branch" id="branch">
+                    <option>Computer Science</option>
+                    <option>IT</option>
+                    <option>Data Science</option>
+                    <option>Cy</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+             <div class="col-xl-4">
+                <input type="text" id="dbms" placeholder="Enter Marks of DBMS">
+            </div>
+            <div class="col-xl-4">
+                <input type="text" id="cn" placeholder="Enter Marks of Cn">
+            </div>
+             <div class="col-xl-4">
+                <input type="text" id="os" placeholder="Enter Marks Of OS">
+            </div>
+         </div>
+
+         <hr>
+
+         <div class="row mt-3">
+            <div class="col-lg-12">
+                <button class="btn-outline-primary" id="add" onclick="add()" >Add Data</button>
+                <button class="btn-outline-primary" id="save" onclick="save()">Save Data</button>
+            </div>
+         </div>
+
+         <hr>
+
+         <table class="table table-primary taable-striped table-bordered table:hover" id="tbody">
+         <thead>
+            <th>Roll</th>
+            <th>Name</th>
+            <th>Branch</th>
+            <th>DBMS</th>
+            <th>CN</th>
+             <th>OS</th>
+            <th>Total</th>
+         </thead>
+         
+         </table>
+
+
+        </div>
+    </div>
+    
+    <script src="./bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+    <script src="Student.js"></script>
+
+</body>
+</html>

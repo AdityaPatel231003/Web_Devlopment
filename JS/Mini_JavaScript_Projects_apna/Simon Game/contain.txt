@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Game</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <h1>Simon Game</h1>
+    <h3>Press any Key To Start</h3>
+
+
+    <div class="container">
+
+        <div class="first-container">
+                    <div class="btn red" id="red" type="button"> 1</div>
+                    <div class="btn yellow" id="yellow" type="button">2</div>
+        </div>
+
+         <div class="second-container">
+                    <div class="btn blue" id="blue" type="button">3</div>
+                    <div class="btn purple" id="purple" type="button">4</div>
+        </div>
+
+    </div>
+
+
+ 
+    
+    
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+body{
+    text-align: center;
+   
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container .btn{
+    height: 200px;
+    width:200px;
+    border: 5px solid black;
+    margin: 0.5rem;
+    border-radius: 0.9rem;
+}
+
+.red{
+background-color: rgba(165, 30, 30, 0.699);
+}
+.yellow{
+background-color: rgba(197, 197, 27, 0.749);
+}
+.purple{
+    background-color: rgba(116, 11, 116, 0.663);
+
+}
+.blue{
+    background-color: rgba(16, 16, 171, 0.51);
+
+}
+.flash{
+    background-color: white;
+}
+.userflash{
+    background-color: rgb(255, 0, 0);
+}
+
+
+
+let start=false;
+let level=0;
+
+
+let track=['red','yellow', 'blue','purple'];
+let givencolor=[];
+let usercolor=[];
+
+
+let btn=document.querySelector('body');
+btn.addEventListener('keypress',function(events){
+   if(start==false){
+    console.log('Started');
+    start=true;
+    levelUp();
+   }
+});
+
+
+let h3=document.querySelector('h3');
+
+function levelUp() {
+    usercolor=[];
+    level++;
+h3.innerText=`Level ${level}`;
+
+let randomindex=Math.floor(Math.random()*3);
+let randomColor=track[randomindex];
+let colorbtn=document.querySelector(`#${randomColor}`);
+displayflash(colorbtn);
+givencolor.push(randomColor);
+
+console.log(givencolor);
+    
+    
+}
+
+function displayflash(colorbtn) {
+
+    colorbtn.classList.add('flash');
+    setTimeout(function(){
+        colorbtn.classList.remove('flash');
+
+    },200);
+   
+}
+function userflash(colorbtn) {
+
+    colorbtn.classList.add('userflash');
+    setTimeout(function(){
+        colorbtn.classList.remove('userflash');
+
+    },200);
+   
+}
+
+function pressbtn(btn) {
+      
+userflash(btn);
+     let usercol= btn.getAttribute('id');
+     usercolor.push(usercol);
+
+    
+     check(usercolor.length-1);
+
+    
+}
+
+function check(idx) {
+    if(usercolor[idx]===givencolor[idx]){
+        if(usercolor.length===givencolor.length){
+           setTimeout( levelUp(),1000);
+        }
+
+    }
+    else{
+        h3.innerText=`u Pressed Wrong Key`;
+//         level=0;
+//       start=false;
+//          level=0;
+//        givencolor=[];
+// usercolor=[];
+
+
+    }
+    
+}
+
+let btns=document.querySelectorAll(".btn");
+for (const btn of btns) {
+    btn.addEventListener('click',function(){
+        pressbtn(btn);
+    });
+    
+}
+
+

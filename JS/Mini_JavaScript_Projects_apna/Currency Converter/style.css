@@ -1,0 +1,11 @@
+body{
+    text-align: center;
+    background-color: rgba(12, 12, 115, 0.705);
+}
+h1{
+    text-decoration: overline;
+}
+button{
+    color: red;
+    font-weight: 700;
+}

@@ -1,0 +1,28 @@
+body{
+    text-align: center;
+    background-color: rgb(33, 77, 111);
+
+    
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+   
+}
+.box .fone{
+    height: 50px;
+    width: 50px;
+    border: 2px solid black;
+    margin: 0.3rem;
+}
+
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.white{
+    background-color: white;
+}
