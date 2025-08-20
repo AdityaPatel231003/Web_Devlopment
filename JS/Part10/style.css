@@ -1,0 +1,21 @@
+section{
+   
+    text-align: center;
+}
+section div{
+    border: 1px solid black;
+    height: 150px;
+    margin: 0.5rem;
+}
+practiceQ1{
+    display: flex;
+    
+}
+
+practiceQ1 .div{
+    display: flex;
+     border: 1px solid black;
+        height: 100px;
+        width: 125px;
+        margin: 0.5rem;
+}
