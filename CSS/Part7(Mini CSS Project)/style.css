@@ -1,0 +1,135 @@
+* {
+  font-family: "Caprasimo", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+#mainbox{
+    height:100vh;
+    width:100%;
+    background-image: url("photo.jpg");
+    background-size: cover;
+}
+
+#mainbox #hamburger i {
+    position: absolute;
+   color: rgba(255, 255, 255);
+   font-size: 30px;
+   font-weight: 700;
+   line-height: 60px;
+   left: 10px;
+}
+
+#sidebar{
+    position: fixed;
+    left:-360px;
+    height: 100vh;
+    width: 20%;
+    background-color: rgba(255, 255, 255, 0.156);
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.626);
+    transition: 0.3s linear 0.1s;
+}
+
+#sidebar #logo{
+    position: absolute;
+    width: 100%;
+    line-height: 60px;
+    height: 60px;
+    box-shadow: 0px 2px 3px rgba(255, 255, 255, 0.619);
+}
+#sidebar #logo a{
+    position: absolute;
+    left:40px;
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+    
+}
+
+
+
+#sidebar #menu {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    line-height: 45px;
+    color: white;
+    opacity: 0.9;
+}
+
+#sidebar #cross{
+    position: absolute;
+   color: rgba(255, 255, 255, 0.603);
+   font-size: 15px;
+   font-weight: 400;
+   line-height: 60px;
+   left: 280px;
+}
+
+
+#sidebar #menu ul li {
+    padding: 10px 10px;
+    
+}
+#sidebar #menu ul li  a {
+    color: white;
+    text-decoration: none;
+     font-weight: 300;
+    font-size: 18px;
+}
+#sidebar #menu i {
+  padding-right: 8px;
+}
+
+
+#sidebar #socialmedia {
+    position: absolute;
+    bottom:14px;
+    left: 25%;
+}
+
+#sidebar #socialmedia ul i{
+    color: rgba(255, 255, 255, 0.503);
+    padding: 0 5px;  
+}
+
+#mainbox #check{
+    display: none;
+}
+
+ #menu ul  :hover{
+     transition: 0.3s linear 0.1s;
+      box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.619);
+
+}
+#sidebar #socialmedia ul  i:hover{
+    color: rgb(255, 255, 255);
+    transform: scale(1.3);
+    opacity: 1;
+     transition: 0.3s linear 0.1s;
+}
+
+
+
+#mainbox #hamburger i:hover{
+     cursor: pointer;
+   font-size: 41px;
+    transition: 0.2s linear 0.1s;
+  
+}
+#cross i:hover{
+    cursor: pointer;
+     font-size: 20px;
+      transition: 0.3s linear 0.1s;
+
+}
+
+#check:checked ~ #sidebar{
+    transition: 0.3s linear 0.1s;
+    left:0px;
+}
+#check:checked ~ #hamburger{
+    opacity: 0;
+}
