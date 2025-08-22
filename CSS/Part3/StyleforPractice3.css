@@ -1,0 +1,13 @@
+#second {
+   display:inline
+
+}
+#first{
+    display:list-item;
+}
+
+/* the bullet points disappear
+beacause 
+by default
+ display value is list-item 
+which give bullet point property */
