@@ -1,0 +1,29 @@
+.outer{
+    height:200px;
+    width:200px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+    transition-duration:2s;
+    transition-delay: 0.2s;
+    box-shadow: 2px 6px 15px rgb(8, 8, 8);
+}
+
+.inner{
+    padding: 0px 2px 0px 2px;
+}
+img{
+    height:50%;
+    width:100%;
+     border-radius: 5px;
+}
+
+
+.outer:hover{
+    box-shadow: 4px 12px 21px rgba(175, 181, 12, 0.93);
+}
+
+
+
+
