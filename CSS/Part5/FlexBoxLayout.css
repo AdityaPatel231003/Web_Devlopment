@@ -1,0 +1,25 @@
+#container{
+    height: 555px;
+    width: 80%;
+    margin: 10px auto;
+    border: 5px solid black;
+    display: flex;
+      flex-wrap: wrap;
+    /* flex-direction: column; */
+    /* justify-content: flex-end; */
+    /* align-items: center; */
+  
+    align-content: flex-end;
+    
+
+}
+h3{
+   text-align: center;
+}
+#container div{
+    height:50px;
+    width:500px;
+}
+#voilet{
+    align-self: center;
+}
