@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update a Posts</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1 class="Quora">Edit/update a  Posts Here...........</h1>
+        <h3> id: <%=post.id%></h3>
+        <h3>username:@<%=post.username%></h3>
+        <div class="box">
+                    <form  method="post" action="/posts/<%=post.id%>?_method=PATCH">
+                            <textarea name="content"  rows="10" cols="25"> <%=post.content%></textarea>
+                            <button>Edit</button>
+                    </form>
+        </div>
+      
+
+</body>
+</html>
