@@ -1,0 +1,14 @@
+
+body{
+    background-color: aquamarine;
+}
+
+table{
+    border: 2px solid black;
+}
+thead{
+    border: 2px solid black;
+}
+td{
+    border: 2px solid black;
+}

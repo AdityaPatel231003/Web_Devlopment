@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Users</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>ALL USERS ARE HERE</h1>
+    <form  method="get" action="/user/add">
+        <button>ADD</button>
+    </form>
+    <table>
+        <thead>
+            <th>id</th>
+             <th>username</th>
+              <th>email</th>
+               <th>password</th>
+        </thead>
+        <tbody>
+            <%for(const user of users){%>
+            <tr>
+                <td><%=user.id%></td>
+                <td><%=user.username%></td>
+                <td><%=user.email%></td>
+                <td><%=user.password%></td>
+
+                    <form method="get" action="/user/<%=user.id%>/edit">
+                    <td><button>Edit</button></td>
+                    </form>
+                     <form method="get" action="/user/<%=user.id%>/del">
+                    <td><button>DELETE</button></td>
+                    </form>
+                
+            </tr>
+            <%}%>
+        </tbody>
+    </table>
+    
+</body>
+</html>
+
+        
