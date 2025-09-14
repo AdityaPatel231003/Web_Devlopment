@@ -1,0 +1,11 @@
+.AmazonCard{
+                border: 2px solid black;
+                border-radius: 5%;
+                background-color: rgb(255, 255, 255);
+                height:170px;
+                width: 190px;
+                margin: 10px;
+}
+li{
+      list-style-type: none;
+}

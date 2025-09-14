@@ -1,0 +1,10 @@
+.AmazonPrice #oldprice{
+        text-decoration: line-through;
+}
+.AmazonPrice{
+                border-bottom-left-radius: 14px;
+                border-bottom-right-radius: 14px;
+                border: 2px solid #e0c367;
+                height: 36px;
+                background-color: #e0c367;
+}

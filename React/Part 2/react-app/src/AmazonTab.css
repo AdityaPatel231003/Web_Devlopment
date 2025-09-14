@@ -1,0 +1,12 @@
+.AmazonTab{
+    /* border: 2px solid black; */
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    border: 2px solid #e0c367;
+    
+}
